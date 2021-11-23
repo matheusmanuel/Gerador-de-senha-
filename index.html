@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="shoertcut icon" href="img/favicon.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de senha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Gere uma senha segura</h1>
+      <div class="senha-gerada-box">
+        <span id="senha-gerada">Xu4/TGkKn2</span>
+        <button class="btn-copiar" id="copy">copiar</button>
+      </div>
+    </header>
+
+    <div class="config">
+      <div class="box-form-control">
+        <div class="control-tamanho">
+          <label for="tamanho">Tamanho da senha</label>
+          <input type="number" id="tamanho" min="2" max="30" value="10">
+        </div>
+
+        <label class="switch">
+          <span class="switch-text">Maiscúlas</span>
+          <div class="switch-wraper">
+            <input type="checkbox" id="maiscula" checked>
+            <span class="switch-button"></span>
+          </div>
+        </label>
+
+        <label class="switch">
+          <span class="switch-text">Maiscúlas</span>
+          <div class="switch-wraper">
+            <input type="checkbox" id="minuscula" checked>
+            <span class="switch-button"></span>
+          </div>
+        </label>
+
+        <label class="switch">
+          <span class="switch-text">Numeros</span>
+          <div class="switch-wraper">
+            <input type="checkbox" id="numero" checked>
+            <span class="switch-button"></span>
+          </div>
+        </label>
+
+        <label class="switch">
+          <span class="switch-text">Simbolos</span>
+          <div class="switch-wraper">
+            <input type="checkbox" id="simbolo" checked>
+            <span class="switch-button"></span>
+          </div>
+        </label>
+      </div>
+      <button class="btn-gerar" id="btn-gerar">Gerar Senha</button>
+    </div>
+    <footer>
+      <div class="medias-socias">
+        <a href="https://www.facebook.com/matheus.hernandez.792/" target="_blank"> <img src="img/facebook.png"></a>
+        <a href="https://www.instagram.com/matheus_manuel_/" target="_blank"><img src="img/instagram.png"></a>
+        <a href="https://github.com/matheusmanuel" target="_blank"><img src="img/github.png"></a>
+      </div>
+      <p id="note">Matheus &copy; copyright <span id="data"></span></p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

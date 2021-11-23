@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-color: rgb(0, 110, 255);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 500px;
+  width: 500px;
+  position: relative;
+  padding: 0 3%;
+}
+
+.header {
+  padding: 1rem;
+}
+
+.header h1 {
+  margin: 20px 0;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.senha-gerada-box {
+  background-color: white;
+  color: black;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: 4px;
+}
+
+.btn-copiar {
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, 20%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+}
+
+.senha-gerada-box:hover .btn-copiar {
+  opacity: 1;
+  transform: translate(0, 0%);
+}
+
+.config {
+  padding: 0 1rem 1rem;
+}
+
+.control-tamanho {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#tamanho {
+  font-size: 0.7em;
+  text-align: center;
+  padding: 0;
+}
+
+.box-form-control {
+  padding: 10px 0;
+}
+
+input {
+  outline: none !important;
+  border: 0;
+}
+
+.btn-gerar {
+  background-color: rgb(136, 206, 6);
+  border: none;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  width: 100%;
+  transition: .4s;
+  outline: none;
+}
+
+/* switch */
+.switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.switch .switch-text {
+  font-size: 1.4rem;
+}
+
+.switch .switch-wraper {
+  margin: 5px 0;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: relative;
+}
+
+.switch .switch-wraper .switch-button {
+  float: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #475569;
+}
+
+.switch .switch-wraper input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.switch .switch-wraper .switch-button::before {
+  content: '';
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  transition: .4s all ease;
+  background-color: aliceblue;
+}
+
+.switch .switch-wraper input:checked+.switch-button {
+  background-color: #58A721;
+}
+
+.switch .switch-wraper input:checked+.switch-button::before {
+  transform: translateX(26px);
+}
+
+footer {
+  text-align: center;
+}
+
+footer .medias-socias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+footer .medias-socias img {
+  margin: 0 10px;
+}
+
+#note {
+  font-size: 1.5rem;
+  color: black;
+}
+
+::selection {
+  background-color: rgb(136, 206, 6);
+  color: white;
+}
+
+@media screen and (max-width:360px) {
+
+  .control-tamanho label,
+  .switch .switch-text {
+    font-size: 1rem;
+  }
+  .header h1{
+    font-size: 1.5em;
+  }
+
+}
